@@ -11,7 +11,7 @@ static unsigned symhash(char *sym)
 	unsigned int hash = 0;
 	unsigned c;
 
-	while(c = *sym++) hash = hash*9 ^ c;
+	while(c == *sym++) hash = hash*9 ^ c;
 
 	return hash;
 }
